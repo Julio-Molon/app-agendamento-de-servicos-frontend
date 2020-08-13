@@ -1,6 +1,11 @@
 import React from 'react';
-import './App.css';
+import GlobalStyle from './styles/global';
 
-const App: React.FC = () => <> bem tri </>;
+const App: React.FC = () => (
+  <>
+    <h1>Hello Word</h1>
+    <GlobalStyle />
+  </>
+);
 
 export default App;
