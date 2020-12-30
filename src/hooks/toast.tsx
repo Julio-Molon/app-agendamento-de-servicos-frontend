@@ -1,10 +1,11 @@
-import React, { createContext, useContext, useCallback, useState } from 'react';
+import React, { createContext, useCallback, useContext, useState } from 'react';
 import { uuid } from 'uuidv4';
+
 import ToastContainer from '../components/ToastContainer';
 
 export interface ToastMessage {
   id: string;
-  type: 'success' | 'error' | 'info';
+  type?: 'success' | 'error' | 'info';
   title: string;
   description?: string;
 }
@@ -30,7 +31,7 @@ const ToastProvider: React.FC = ({ children }) => {
         description,
       };
 
-      setMessages(oldMessages => [...oldMessages, toast]);
+      setMessages(state => [...state, toast]);
     },
     [],
   );

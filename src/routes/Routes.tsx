@@ -1,12 +1,15 @@
+/* eslint-disable react/jsx-indent */
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {
   Route as ReactDOMRoute,
-  RouteProps as ReactDomRouteProps,
+  RouteProps as ReactDOMRouteProps,
   Redirect,
 } from 'react-router-dom';
+
 import { useAuth } from '../hooks/auth';
 
-interface RouteProps extends ReactDomRouteProps {
+interface RouteProps extends ReactDOMRouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
 }
